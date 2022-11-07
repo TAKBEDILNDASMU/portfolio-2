@@ -1,0 +1,221 @@
+/* Font  */
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+
+/* base */
+
+:root {
+  --color-body: #b6cbce;
+  --color-header: #eef3db;
+  --color-base: #033f47;
+  --color-base2: #022a30;
+  --color-brand: rgb(224, 247, 128);
+  --color-brand2: #deff58;
+  --disbar-width: 240px;
+  --font-base: "Bai Jamjuree";
+}
+
+body {
+  background-color: var(--color-base2);
+  font-family: var(--font-base), sans-serif;
+  color: var(--color-body);
+  min-height: 2000px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-body);
+  transition: all 0.4s ease;
+}
+
+a:hover {
+  color: var(--color-brand);
+}
+
+img {
+  width: 100%;
+}
+
+.myImgP {
+  width: 180px;
+  height: 180px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: #fff;
+  font-weight: 700;
+}
+
+.fullHeight {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* button */
+.btnHome {
+  padding: 12px 28px;
+  font-weight: 700;
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+  color: var(--color-base);
+}
+.btnHome:hover,
+.btnHome:focus {
+  background-color: var(--color-brand2);
+  color: var(--color-base);
+  border-color: var(--color-brand2);
+}
+
+.linkHome {
+  font-weight: 700;
+  position: relative;
+}
+
+.linkHome::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-brand);
+  position: absolute;
+  left: 0;
+  top: 110%;
+  transition: all 0.4s;
+}
+
+.linkHome:hover::after {
+  width: 100%;
+}
+
+/* card */
+.bgBase {
+  background-color: var(--color-base);
+}
+
+.fullHeight .shadowEffect {
+  transition: all 0.5s;
+}
+
+.shadowEffect:hover {
+  box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.rounded-4 {
+  border-radius: 10px;
+}
+
+.colorBrand {
+  color: var(--color-brand2);
+}
+
+/* end base */
+
+/* Navbar */
+
+.myNavbar {
+  background-color: var(--color-base);
+}
+
+.myNavbar .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+}
+
+.myNavbar .ulNavbar .nav-link:hover,
+.navbar .ulNavbar .nav-link:focus {
+  color: var(--color-brand);
+}
+
+@media (min-width: 992px) {
+  .myNavbar {
+    min-height: 100vh;
+    width: var(--disbar-width);
+    background: linear-gradient(rgba(3, 63, 71, 0.8), rgba(3, 63, 71, 0.8)), url(../images/sidebar-img.jpg);
+  }
+
+  .navContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navContainer .ulNavbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .myImgP {
+    border: 8px solid var(--color-brand);
+  }
+}
+
+/* Navbar End */
+
+/* Content Wrapper */
+
+@media (min-width: 992px) {
+  .contentWrapper {
+    padding-left: var(--disbar-width);
+  }
+}
+
+/* Home */
+
+#jobs {
+  color: var(--color-brand);
+}
+
+.homeDesc {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Home End */
+
+/* service */
+
+.iconbox {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  background-color: var(--color-brand);
+  color: var(--color-base);
+}
+
+/* work */
+
+.workCard .workCardImg {
+  overflow: hidden;
+}
+
+.workCard .workCardImg img {
+  transition: all 0.4s ease;
+}
+
+.workCard:hover .workCardImg img {
+  transform: scale(1.1);
+}
+
+/* contact */
+#contact .form-control {
+  background-color: var(--color-base);
+  border: none;
+  color: var(--color-body);
+}
+
+#contact .form-control::placeholder {
+  color: var(--color-body);
+}
